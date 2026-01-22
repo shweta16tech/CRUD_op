@@ -3,12 +3,6 @@ using crudopertn.Models;
 
 namespace crudopertn.Controllers
 {
-
-
-
-
-
-
     [ApiController]
     [Route("[controller]")]
     public class UserController : Controller
@@ -26,7 +20,7 @@ namespace crudopertn.Controllers
             var users = _dal.GetAllUsers();
             return Ok(users);
         }
-
+        
         [HttpPost]
         public IActionResult Create(User user)
         {
@@ -39,8 +33,4 @@ namespace crudopertn.Controllers
             return View(user);
         }
     }
-
-
-
-
 }
